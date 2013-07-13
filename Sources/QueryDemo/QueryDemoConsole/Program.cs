@@ -28,11 +28,13 @@ namespace QueryDemoConsole
 
 			//all workitems;
 			var allWIQuery = from workitem in tpc.WorkItemSet()
+							 where workitem.Id == 2
 							 select workitem;
 
 			result = allWIQuery.ToList();
 
-			var projectWiQuery = from workitem in scrumProject.WorkItemSet()
+			var projectWiQuery = from workitem in scrumProject.WorkItemSet()								
+								 where workitem.Title.Contains("Build")
 								 select workitem;
 
 			result = projectWiQuery.ToList();
