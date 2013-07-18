@@ -34,7 +34,8 @@ namespace QueryDemoConsole
 			result = allWIQuery.ToList();
 
 			var projectWiQuery = from workitem in scrumProject.WorkItemSet()								
-								 where workitem.Title.Contains("Build")
+								 where workitem.Title.Contains("Build")								 
+								 && workitem.Field<string>("System.AssignedTo") == "Michel Perfetti"
 								 select workitem;
 
 			result = projectWiQuery.ToList();

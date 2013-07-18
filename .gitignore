@@ -151,3 +151,4 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/Sources/QueryDemo/packages/Wilinq.0.1.0.2/Wilinq.0.1.0.2.nupkg
