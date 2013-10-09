@@ -32,6 +32,7 @@ namespace QueryDemoConsole
 							 select workitem;
 
 			result = allWIQuery.ToList();
+           
 
 			var projectWiQuery = from workitem in scrumProject.WorkItemSet()								
 								 where workitem.Title.Contains("Build")								 
@@ -39,6 +40,18 @@ namespace QueryDemoConsole
 								 select workitem;
 
 			result = projectWiQuery.ToList();
+
+
+            // Check if the mapping is supported
+            if (scrumProject.IsSupported<Bug>())
+            {
+                // this query only works for Scrum template 2.0 
+                var bugQuery = from bug in scrumProject.SetOf<Bug>()
+                               where bug.Title == "Build Failure in Build: MonApp_20130328.2" && bug.AssignedTo == QueryConstant.Me
+                               select bug;
+
+                var bugResult = bugQuery.ToList();
+            }
 
 		}
 	}

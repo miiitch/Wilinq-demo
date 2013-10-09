@@ -59,18 +59,19 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WiLinq.LinqProvider, Version=0.1.0.29089, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="WiLinq.LinqProvider, Version=0.1.0.28105, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Wilinq.0.1.0.2\lib\net45\WiLinq.LinqProvider.dll</HintPath>
+      <HintPath>..\packages\Wilinq.0.1.1.0\lib\net45\WiLinq.LinqProvider.dll</HintPath>
     </Reference>
-    <Reference Include="WiLinq.Wiql, Version=0.1.0.30893, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="WiLinq.Wiql, Version=0.1.0.29911, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Wilinq.0.1.0.2\lib\net45\WiLinq.Wiql.dll</HintPath>
+      <HintPath>..\packages\Wilinq.0.1.1.0\lib\net45\WiLinq.Wiql.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratedCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
